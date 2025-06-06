@@ -1,0 +1,23 @@
+name = "Sieve"
+grammar = "sieve"
+path_suffixes = ["sieve", "sieveinterface"]
+line_comments = ["# "]
+block_comment = ["/*", "*/"]
+autoclose_before = ")}]"
+brackets = [
+    { start = "{", end = "}", close = true, newline = true },
+    { start = "[", end = "]", close = true, newline = true },
+    { start = "(", end = ")", close = true, newline = true },
+    { start = "\"", end = "\"", close = true, newline = false, not_in = [
+        "string",
+    ] },
+    { start = "'", end = "'", close = true, newline = false, not_in = [
+        "string",
+        "comment",
+    ] },
+    { start = "/*", end = " */", close = true, newline = false, not_in = [
+        "string",
+        "comment",
+    ] },
+]
+documentation = { start = "/*", end = "*/", prefix = "* ", tab_size = 1 }

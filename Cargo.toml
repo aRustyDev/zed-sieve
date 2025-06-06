@@ -1,0 +1,18 @@
+[package]
+name = "zed-sieve"
+version = "0.1.0"
+edition = "2024"
+description = "Language support for Sieve email filtering language (RFC 5228) with Proton advanced features"
+license = "AGPL-3.0-or-later"
+readme = "README.md"
+homepage = "https://github.com/arustydev/zed-sieve"
+# keywords = [
+#     "sdk",
+#     "open-metadata",
+#     "data-lineage",
+#     "data-quality",
+#     "data-governance",
+# ]
+# categories = ["api-bindings", "authentication", "database"]
+
+[dependencies]
