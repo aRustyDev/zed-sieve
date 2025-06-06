@@ -23,6 +23,6 @@ repository = "https://github.com/arustydev/tree-sitter-sieve"
 rev = "main"
 
 # Language server configuration
-[language_servers.sieve_lsp]
+[language_servers.sieve]
 name = "Sieve Language Server"
 languages = ["Sieve"]
