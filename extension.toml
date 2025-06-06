@@ -19,7 +19,7 @@ auto_indent_using_last_non_empty_line = true
 
 # Tree-sitter grammar configuration
 [grammars.sieve]
-repository = "https://github.com/arustydev/tree-sitter-sieve"
+repository = "https://github.com/aRustyDev/tree-sitter-sieve"
 rev = "main"
 
 # Language server configuration

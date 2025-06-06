@@ -3,6 +3,38 @@
 
 A comprehensive Language Server Protocol extension for [Zed](https://zed.dev) that provides intelligent editing support for the Sieve email filtering language (RFC 5228) with enhanced support for Proton Mail's advanced features.
 
+## Repo structure
+
+```
+zed-sieve/
+├── extension.toml             # Zed extension configuration
+├── src/                       # Extension source code
+│   └── extension.rs           # Main extension implementation
+├── server/                    # Language server implementation
+│   ├── src/
+│   │   └── server.ts          # LSP server
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── build/                 # Built server files
+├── languages/                 # Language configuration
+│   └── sieve/
+│       └── config.toml        # Language-specific settings
+├── docs/                      # Documentation
+│   ├── installation.md
+│   ├── configuration.md
+│   └── features.md
+├── examples/                  # Example configurations
+│   └── settings.json
+├── .github/                   # CI/CD workflows
+│   └── workflows/
+│       ├── ci.yml
+│       ├── release.yml
+│       └── test.yml
+├── Cargo.toml                 # Rust extension config
+├── README.md
+├── LICENSE
+└── .gitignore
+```
 ## Features
 
 ### files
@@ -118,20 +150,10 @@ Hover over any Sieve command to see:
    cd server
    npm install
    npm run build
-
-   # Tree-sitter grammar
-   cd grammar
-   npm install
-   npx tree-sitter generate
-   npx tree-sitter build
    ```
 
 2. Run tests:
    ```bash
-   # Grammar tests
-   cd grammar
-   npx tree-sitter test
-
    # Language server tests
    cd server
    npm test

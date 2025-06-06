@@ -16,3 +16,4 @@ homepage = "https://github.com/arustydev/zed-sieve"
 # categories = ["api-bindings", "authentication", "database"]
 
 [dependencies]
+zed_extension_api = "0.5.0"
