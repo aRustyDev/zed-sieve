@@ -1,0 +1,1 @@
+# tmpl-editor-extension-zed
