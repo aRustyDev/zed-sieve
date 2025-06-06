@@ -1,7 +1,7 @@
-
 use std::fs;
-use zed::lsp::CompletionKind;
-use zed::{serde_json, CodeLabel, LanguageServerId, Result};
+// use zed::lsp::CompletionKind;
+use zed::{LanguageServerId, Result};
+// use zed::{serde_json, CodeLabel, LanguageServerId, Result};
 use zed_extension_api::{self as zed, Command, DownloadedFileType, Worktree};
 
 struct SieveExtension {
@@ -22,7 +22,7 @@ impl zed::Extension for SieveExtension {
     ) -> Result<Command> {
         match language_server_id.as_ref() {
             "sieve_lsp" => {
-                let command_path = self.language_server_binary_path(language_server_id, worktree)?;
+                let command_path = self.language_server_command(language_server_id, worktree)?;
                 Ok(Command {
                     command: command_path,
                     args: vec!["--stdio".to_string()],
@@ -50,7 +50,7 @@ impl zed::Extension for SieveExtension {
         );
 
         let release = zed::latest_github_release(
-            "yourusername/sieve-language-server",
+            "arustydev/sieve-language-server",
             zed::GithubReleaseOptions {
                 require_assets: true,
                 pre_release: false,
@@ -59,9 +59,9 @@ impl zed::Extension for SieveExtension {
 
         let (platform, arch) = zed::current_platform();
         let asset_name = format!(
-            "sieve-lsp-{}-{}.{}",
-            platform.as_ref(),
-            arch.as_ref(),
+            "sieve-lsp-{:#?}-{:#?}.{}",
+            platform,
+            arch,
             match platform {
                 zed::Os::Mac | zed::Os::Linux => "tar.gz",
                 zed::Os::Windows => "zip",
