@@ -1,0 +1,47 @@
+{
+  // File Type Associations
+  "file_types": {
+    // Map file extensions to Sieve language
+    "Sieve": ["sieve", "sv", "*.sieve", "*.sv"]
+  },
+  "languages": {
+    // Define Sieve language settings
+    "Sieve": {
+      // Associate with your custom language server
+      "language_servers": ["sieve-lsp"],
+
+      // Editor behavior for Sieve files
+      "tab_size": 2,
+      "hard_tabs": false,
+      "preferred_line_length": 80,
+
+      // Auto-formatting settings
+      "format_on_save": "on",
+      "formatter": "language_server",
+
+      // Code completion settings
+      "show_completions_on_input": true
+    }
+  },
+  "lsp": {
+    "sieve_lsp": {
+      "binary": {
+        // Whether to fetch the binary from the internet, or attempt to find locally.
+        "ignore_system_version": false,
+        // "path": "/path/to/sieve-lsp",
+        "path": "./target/release/sieve-lsp"
+        // "arguments": ["--option", "value"],
+        // Environment variables for the language server process
+        // "env": {
+        //   "RUST_LOG": "info" // Set log level (debug, info, warn, error)
+        // }
+      },
+      "initialization_options": {
+        "proton_extensions": true,
+        "strict_mode": false,
+        "max_errors": 100,
+        "semantic_analysis": true
+      }
+    }
+  }
+}
