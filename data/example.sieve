@@ -18,8 +18,7 @@ if anyof (
 # Priority inbox for important domains
 if address :domain :is "from" ["company.com", "client.com"] {
     fileinto "Priority";
-    addflag "\\Important";
-}
+s}
 
 # Spam filtering with regex
 if header :regex "subject" "\\b(viagra|lottery|prince)\\b" {

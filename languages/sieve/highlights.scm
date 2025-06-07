@@ -17,8 +17,9 @@
 (action_name) @function.builtin
 
 ; Tagged arguments
-(tagged_argument ":" @punctuation.delimiter)
-(tag_name) @parameter
+(tagged_argument_with_value ":" @punctuation.delimiter)
+(tagged_argument_no_value ":" @punctuation.delimiter)
+; (tag_name) @parameter
 
 ; Strings
 (string) @string
