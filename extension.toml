@@ -2,7 +2,7 @@
 # [extension]
 id = "sieve"
 name = "Sieve"
-version = "0.1.0"
+version = "0.1.6"
 schema_version = 1
 authors = ["Adam Smith <developer@gh.arusty.dev>"]
 description = "Language support for Sieve email filtering language (RFC 5228) with Proton advanced features"
@@ -14,6 +14,6 @@ repository = "https://github.com/aRustyDev/tree-sitter-sieve"
 rev = "main"
 
 # Language server configuration
-[language_servers.sieve]
+[language_servers.sieve_lsp]
 name = "Sieve Language Server"
 languages = ["Sieve"]
