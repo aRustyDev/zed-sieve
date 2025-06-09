@@ -63,7 +63,6 @@ zed-sieve/
 
 ### Prerequisites
 - [Zed editor](https://zed.dev) (latest version)
-- [Node.js](https://nodejs.org) v16+ (for language server)
 - [Rust](https://rustup.rs/) (for extension compilation)
 
 ### Install via Zed Extensions

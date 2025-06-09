@@ -28,11 +28,11 @@ impl zed::Extension for SieveExtension {
     ) -> Result<Command> {
         match language_server_id.as_ref() {
             "sieve_lsp" => {
-                let command_path = "/Users/analyst/repos/code/public/sieve_language_server/target/release/sieve-lsp".to_string();
+                let command_path = "sieve_lsp".to_string();
                 // self.language_server_binary_path(language_server_id, worktree)?;
                 Ok(Command {
                     command: command_path,
-                    args: vec!["--stdio".to_string()],
+                    args: vec![],
                     env: Default::default(),
                 })
             }

@@ -2,3 +2,5 @@
 *.wasm
 
 grammars/
+Cargo.lock
+diagnose.sh

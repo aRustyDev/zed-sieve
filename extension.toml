@@ -2,7 +2,7 @@
 # [extension]
 id = "sieve"
 name = "Sieve"
-version = "0.1.6"
+version = "0.1.7"
 schema_version = 1
 authors = ["Adam Smith <developer@gh.arusty.dev>"]
 description = "Language support for Sieve email filtering language (RFC 5228) with Proton advanced features"
