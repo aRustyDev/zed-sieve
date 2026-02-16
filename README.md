@@ -74,7 +74,7 @@ zed-sieve/
 ### Manual Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/zed-sieve
+   git clone https://github.com/aRustyDev/zed-sieve
    cd zed-sieve
    ```
 2. Open Zed
@@ -109,7 +109,7 @@ The extension automatically activates for files with these extensions:
 ### Building from Source
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/zed-sieve
+   git clone https://github.com/aRustyDev/zed-sieve
    cd zed-sieve
    ```
 
